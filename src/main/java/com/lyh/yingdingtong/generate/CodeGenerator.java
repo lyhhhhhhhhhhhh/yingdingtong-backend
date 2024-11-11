@@ -29,7 +29,7 @@ public class CodeGenerator {
     public static void main(String[] args) throws TemplateException, IOException {
         // 指定生成参数
         String packageName = "com.lyh.yingdingtong";
-        String dataName = "影院";
+        String dataName = "影院电影表";
         String dataKey = "cinema";
         String upperDataKey = "Cinema";
 

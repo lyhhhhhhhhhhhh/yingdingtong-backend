@@ -57,6 +57,11 @@ public class MovieVO implements Serializable {
     private String movieRegion;
 
     /**
+     * 剧情简介
+     */
+    private String movieSynopsis;
+
+    /**
      * id
      */
     private Long id;

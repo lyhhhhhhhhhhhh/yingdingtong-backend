@@ -47,6 +47,12 @@ public class MovieUpdateRequest implements Serializable {
      */
     private BigDecimal movieRating;
 
+
+    /**
+     * 剧情简介
+     */
+    private String movieSynopsis;
+
     /**
      * 电影地区
      */
