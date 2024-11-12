@@ -73,6 +73,12 @@ public class MovieQueryRequest extends PageRequest implements Serializable {
     private String movieRegion;
 
     /**
+     * 剧情简介
+     */
+
+    private String movieSynopsis;
+
+    /**
      * 搜索词
      */
     private String searchText;

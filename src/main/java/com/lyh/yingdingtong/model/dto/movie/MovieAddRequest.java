@@ -48,6 +48,12 @@ public class MovieAddRequest implements Serializable {
     private String movieRegion;
 
     /**
+     * 剧情简介
+     */
+
+    private String movieSynopsis;
+
+    /**
      * 创建用户 id
      */
     private Long userId;

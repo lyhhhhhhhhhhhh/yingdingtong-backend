@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.lyh.yingdingtong.mapper.CinemamoviescheduleMapper">
+
+    <resultMap id="BaseResultMap" type="com.lyh.yingdingtong.model.entity.Cinemamovieschedule">
+            <id property="id" column="id" jdbcType="BIGINT"/>
+            <result property="cinemaId" column="cinemaId" jdbcType="BIGINT"/>
+            <result property="movieId" column="movieId" jdbcType="BIGINT"/>
+            <result property="userId" column="userId" jdbcType="BIGINT"/>
+            <result property="showTime" column="showTime" jdbcType="TIMESTAMP"/>
+            <result property="movieLanguage" column="movieLanguage" jdbcType="VARCHAR"/>
+            <result property="cinemaHallName" column="cinemaHallName" jdbcType="VARCHAR"/>
+            <result property="moviePrice" column="moviePrice" jdbcType="DECIMAL"/>
+            <result property="editTime" column="editTime" jdbcType="TIMESTAMP"/>
+            <result property="createTime" column="createTime" jdbcType="TIMESTAMP"/>
+            <result property="updateTime" column="updateTime" jdbcType="TIMESTAMP"/>
+            <result property="isDeleted" column="isDeleted" jdbcType="TINYINT"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        id,cinemaId,movieId,
+        userId,showTime,movieLanguage,
+        cinemaHallName,moviePrice,editTime,
+        createTime,updateTime,isDeleted
+    </sql>
+</mapper>

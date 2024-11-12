@@ -1,19 +1,19 @@
 package com.lyh.yingdingtong.model.entity;
 
 import com.baomidou.mybatisplus.annotation.*;
-import lombok.Data;
 
 import java.io.Serializable;
 import java.math.BigDecimal;
 import java.util.Date;
+import lombok.Data;
 
 /**
- * 电影
- * @TableName movie
+ * 影院电影排期表
+ * @TableName CinemaMovieSchedule
  */
-@TableName(value ="movie")
+@TableName(value ="CinemaMovieSchedule")
 @Data
-public class Movie implements Serializable {
+public class Cinemamovieschedule implements Serializable {
     /**
      * id
      */
@@ -21,44 +21,39 @@ public class Movie implements Serializable {
     private Long id;
 
     /**
-     * 电影名称
+     * 影院 id
      */
-    private String movieTitle;
+    private Long cinemaId;
 
     /**
-     * 电影类型
+     * 电影 id
      */
-    private String movieType;
-
-    /**
-     * 电影时长
-     */
-    private Integer movieDuration;
-
-    /**
-     * 电影图片
-     */
-    private String moviePicture;
-
-    /**
-     * 电影评分
-     */
-    private BigDecimal movieRating;
-
-    /**
-     * 电影地区
-     */
-    private String movieRegion;
-
-    /**
-     * 剧情简介
-     */
-    private String movieSynopsis;
+    private Long movieId;
 
     /**
      * 创建用户 id
      */
     private Long userId;
+
+    /**
+     * 放映时间
+     */
+    private Date showTime;
+
+    /**
+     * 语言(如中文、英文)
+     */
+    private String movieLanguage;
+
+    /**
+     * 放映厅名称
+     */
+    private String cinemaHallName;
+
+    /**
+     * 电影价格
+     */
+    private BigDecimal moviePrice;
 
     /**
      * 编辑时间
@@ -79,9 +74,8 @@ public class Movie implements Serializable {
      * 是否删除
      */
     @TableLogic
-    private Integer isDelete;
+    private Integer isDeleted;
 
     @TableField(exist = false)
     private static final long serialVersionUID = 1L;
-
 }

@@ -37,10 +37,6 @@ public class CinemaMovie implements Serializable {
      */
     private Long userId;
 
-    /**
-     * 起始金额
-     */
-    private String startingPrice;
 
     /**
      * 创建时间

@@ -68,4 +68,23 @@ create table if not exists cinema_movie
     createTime     datetime default CURRENT_TIMESTAMP not null comment '创建时间',
     updateTime     datetime default CURRENT_TIMESTAMP not null on update CURRENT_TIMESTAMP comment '更新时间',
     UNIQUE (cinemaId, movieId)
-    ) comment '影院电影' collate = utf8mb4_unicode_ci;
+) comment '影院电影' collate = utf8mb4_unicode_ci;
+
+CREATE TABLE IF NOT EXISTS CinemaMovieSchedule
+(
+    id              BIGINT AUTO_INCREMENT PRIMARY KEY COMMENT 'id',
+    cinemaId        BIGINT NOT NULL COMMENT '影院 id',
+    movieId         BIGINT NOT NULL COMMENT '电影 id',
+    userId          BIGINT NOT NULL COMMENT '创建用户 id',
+    showTime        DATETIME NOT NULL COMMENT '放映时间',
+    movieLanguage   VARCHAR(256) NOT NULL COMMENT '语言(如中文、英文)',
+    cinemaHallName  VARCHAR(256) NOT NULL COMMENT '放映厅名称',
+    moviePrice      DECIMAL(10, 2) NOT NULL COMMENT '电影价格',
+    editTime        DATETIME DEFAULT CURRENT_TIMESTAMP COMMENT '编辑时间',
+    createTime      DATETIME DEFAULT CURRENT_TIMESTAMP COMMENT '创建时间',
+    updateTime      DATETIME DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT '更新时间',
+    isDeleted       TINYINT DEFAULT 0 NOT NULL COMMENT '是否删除',
+
+    INDEX idx_cinemaId (cinemaId),
+    INDEX idx_movieId (movieId)
+) COMMENT '影院电影排期表' COLLATE = utf8mb4_unicode_ci;
