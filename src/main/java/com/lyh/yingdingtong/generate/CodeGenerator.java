@@ -30,8 +30,8 @@ public class CodeGenerator {
         // 指定生成参数
         String packageName = "com.lyh.yingdingtong";
         String dataName = "影院电影表";
-        String dataKey = "cinema";
-        String upperDataKey = "Cinema";
+        String dataKey = "cinemamovieschedule";
+        String upperDataKey = "Cinemamovieschedule";
 
         // 封装生成参数
         Map<String, Object> dataModel = new HashMap<>();
